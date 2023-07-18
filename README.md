@@ -62,21 +62,22 @@ The most paid job is Machine Learning Manager with 900,000 dollars per annum pay
 3. Top 5 most popular jobs and their average pay
 
 Data Analysts, Data Engineers, Data Scientists, and ML engineers are the most common fields of data jobs. They’ll be the most jobs any of us are going into so I’m a little curious about their average pay. Surprisingly, Data Engineer jobs are the highest. I thought Data Analysts would have the highest number of jobs but the pay is just as I expected.
+
 <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*H6bBIP1bejxegOLyAegQGA.png" />
 
 4. What is the average pay for each country?
 
-The country column in the dataset consists of country codes instead of full names of each country. What I did was look for a dataset with country names and their codes then I imported the data into pgadmin (using the same method I talked about). That way I can easily join both tables while querying, so the names can be known. The country with the most paid salary is Aland islands with an average of 900k dollars monthly per annum. The US came 5th with an average of 146,263.45 dollars annually. There is obviously imbalance in the dataset as the data consist of jobs only from that website and there were lots of US jobs which makes US own more accurate than Aland islands own(I think there is only one job from this country in fact). Out of curiosity, I checked for Nigeria jobs and it’s 30,000 USD yearly. Ranking last is Vietnam and Iraq with 4000 USD annually. Again, this isn’t really accurate but it does let you know the offers in the market.
+The country column in the dataset consists of country codes instead of the full names of each country. What I did was look for a dataset with country names and their codes then I imported the data into pgadmin (using the same method I talked about). That way I can easily join both tables while querying, so the names can be known. The country with the most paid salary is Aland Islands with an average of 900k dollars monthly per annum. The US came 5th with an average of 146,263.45 dollars annually. There is obviously an imbalance in the dataset as the data consist of jobs only from that website and there were lots of US jobs which makes the US own more accurate than the Aland islands own(I think there is only one job from this country in fact). Out of curiosity, I checked for Nigeria jobs and it’s 30,000 USD yearly. Ranking last in Vietnam and Iraq with 4000 USD annually. Again, this isn’t really accurate but it does let you know the offers in the market.
 
 <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*2G968knGa6ttu5z2vpdMgQ.png" />
-5. Do countries pay alot more than their country’s average? which ones?
+5. Do countries pay a lot more than their country’s average? which ones?
 
-Here, I checked the average of each country and compare with salaries. What the query return is a table where the pay is greater than the average pay of the country and the number of jobs where the pay is greater in that particular country. There are about 351 jobs where the pay is greater than the country avg pay, which is very close to half of the jobs. The USA has 229 jobs them. Again, the USA has a large percentage of jobs in the dataset so it is expected. In the query I used CTE(common table expressions) which serves as creating another table from a preexisting table which you can use all through this particular query. The table is not explicitly created and cannot be reused outside this query unless it is recreated. It is possible to do this same thing using subquery but I always pick CTE’s over subqueries because they are reusable within the query and also seem less complicated.
+Here, I checked the average of each country and compare it with salaries. What the query return is a table where the pay is greater than the average pay of the country and the number of jobs where the pay is greater in that particular country. There are about 351 jobs where the pay is greater than the country's avg pay, which is very close to half of the jobs. The USA has 229 jobs them. Again, the USA has a large percentage of jobs in the dataset so it is expected. In the query I used CTE(common table expressions) which serves as creating another table from a preexisting table which you can use all through this particular query. The table is not explicitly created and cannot be reused outside this query unless it is recreated. It is possible to do this same thing using subquery but I always pick CTEs over subqueries because they are reusable within the query and also seem less complicated.
 
 <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*LEpd8MjLWYzF_p-QkhOQRg.png" />
 6. What is the average pay of entry-level jobs?
 
-This seems self explanatory so I’ll skip through it
+This seems self-explanatory so I’ll skip through it
 
 <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*zzwYPf1ikWrXooA4XClMqw.png" />
 7. Which countries pay their entry-level above the general average pay for entry-level jobs?
@@ -86,12 +87,12 @@ Australia ranks highest with pay of 117,772 USD annually and there are just 6 co
 <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*zE6-klxuyWFKTN5j1Su-5Q.png" />
 8. Is there a change in average entry-level pay yearly?
 
-There has been an increase which is a good thing because the year hasn’t even ended yet and 2022 is the highest. Growth in the demand for data jobs might have led to an increase in pay as there is more recognision now than ever.
+There has been an increase which is a good thing because the year hasn’t even ended yet and 2022 is the highest. Growth in the demand for data jobs might have led to an increase in pay as there is more recognition now than ever.
 
 <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*NflEe15mbyR-kVt1rDZniQ.png" />
 9. How many fully remote jobs do we have?
 
-There are 489 fully remote jobs in total which is above the 50% mark of total number of jobs.
+There are 489 fully remote jobs in total which are above the 50% mark of the total number of jobs.
 
 <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*BMOl3vIPFUEK1atsO2Z6ug.png" />
 10. Do countries pay fully remote entry-level jobs well?
@@ -101,4 +102,4 @@ Yes. They do but only 4 pass the average pay of entry-level jobs.
 <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*EwgEfctDOU0adak5sbiSrg.png" />
 We have reached the end of this query and all I can say is this is definitely interesting. According to this dataset, the pay is good. The pay seems to be worth the stress and most importantly, there are fully remote jobs for entry levels. What I would be more interested in are countries that offer sponsorships but I don’t have data on that. Something I did but failed to show was check how many jobs have the employee’s location different from the company’s location. I think these are the actual fully remote roles and they were very few.
 
-We’ve been here for a while now so I’ll go through the report design in another post. Hope you learned something at least. Have a nice week ❤
+We’ve been here for a while now so I’ll go through the report design another day. Hope you learned something at least. Have a nice week ❤
